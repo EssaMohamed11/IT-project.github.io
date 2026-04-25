@@ -4,7 +4,7 @@
 
 }
 body{
-    background-color:#F0EAD6 ;
+    background-color:#fbf4ec ;
     margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
@@ -54,6 +54,7 @@ body{
     display: flex;
     gap: 20px;
 }
+
 .links{
     display: flex;
     width: 673px;
@@ -62,6 +63,10 @@ body{
     justify-content: space-around;
     font-weight: bold;
     font-family: "Newsreader", serif;
+}
+.links a:active{
+    color: #D99544;
+
 }
 .links a{
     text-decoration: none;
@@ -73,16 +78,10 @@ body{
 .logo{
     width: 112.59px;
     height: 61.98px;
-    padding-bottom: 40px;
     overflow: hidden;
-    
+    padding-bottom: 20px;
 }
-.logo h2{
-    display: inline;
-    color: #543B25;
-    font-family: 'poppins';
-    
-}
+
 main{
     height:2000px ;
 }
@@ -102,6 +101,10 @@ main{
     color: #543B25;
     font-family: 'poppins';
 
+}
+.foot img{
+    width: 112.59px;
+    height: 61.98px;
 }
 .left{
     display: flex;
