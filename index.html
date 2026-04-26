@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+   
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
@@ -16,7 +15,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     <header class="head">
        <div class="logo"><img src="YOUR LIBRARY.svg" alt=""></div>
        <div class="links">
-        <a href="">Home</a>
+        <a href=""  class="act">Home</a>
         <a href="">Explore</a>
         <a href="">My Shelf</a>
         <a href="">Contact Us</a>
@@ -57,14 +56,25 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
     </footer>
     <script>
-    function setTheme(theme){
+function setTheme(theme) {
     let cssFile = document.getElementById("theme-style");
 
-    if(theme === "light"){
+    if (theme === "light") {
         cssFile.href = "light.css";
-    }
-    else{
+    } else {
         cssFile.href = "dark.css";
+    }
+
+    /* save user's choice */
+    localStorage.setItem("theme", theme);
+}
+
+/* load saved theme when page opens */
+window.onload = function () {
+    let savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme) {
+        document.getElementById("theme-style").href = savedTheme + ".css";
     }
 }
 </script>
