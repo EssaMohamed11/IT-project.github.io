@@ -1,222 +1,169 @@
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-*{
+* {
     box-sizing: border-box;
 }
 
-body{
-    background-color:#fbf4ec;
-    margin:0;
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    overflow-x:hidden;
+body {
+    background-color: #fbf4ec;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
 
-
-.head{
-    width:100%;
-    min-height:136px;
-    padding:0 64px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:20px;
-    font-size:21px;
-    font-family:'Newsreader';
-    margin-bottom:40px;
-    
+.head {
+    width: 100%;
+    min-height: 136px;
+    padding: 0 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 21px;
+    font-family: 'Newsreader';
+    margin-bottom: 40px;
+    background-color: white;
 }
 
-.logo{
-    flex-shrink:0;
-    overflow:hidden;
-    padding-bottom:20px;
+.logo {
+    flex-shrink: 0;
+    overflow: hidden;
+    padding-bottom: 20px;
 }
 
-.logo img{
-    width:112px;
-    height:auto;
+.logo img {
+    width: 112px;
+    height: auto;
     padding-top: 20px;
 }
 
-.links{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:35px;
-    font-weight:bold;
-    font-family:"Newsreader", serif;
+.links {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    font-weight: bold;
+    font-family: "Newsreader", serif;
     font-size: 20px;
-    height: max-content;
 }
 
-.links a{
-    text-decoration:none;
-    color:#595856;
-    white-space:nowrap;
+.links a {
+    text-decoration: none;
+    color: #595856;
+    white-space: nowrap;
 }
 
 .links a:hover,
-.links a:active{
-    color:#D99544;
-}
-
-.bu{
-    width:1px;
-}
-
-.search{
-    flex-shrink:0;
-    display:flex;
-    gap:25px;
-    align-items:center;
-    color:#434241;
-}
-
-.search a{
-    text-decoration:none;
-}
-
-.search a img{
-    width:30px;
-}
-
-.li,
-.ri{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
-
-.search hr{
-    height:30px;
-    width:1px;
-    background:black;
-    border:none;
-}
-
-.links .act{
+.links a:active,
+.links .act {
     color: #D99544;
 }
 
-
-main{
-    min-height:2000px;
+.bu {
+    width: 1px;
 }
 
-.c{
-    width:calc(100% - 128px);
-    margin:auto;
+.search {
+    flex-shrink: 0;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    color: #434241;
+}
+
+.search a {
+    text-decoration: none;
+}
+
+.search a img {
+    width: 30px;
+}
+
+.li,
+.ri {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search hr {
+    height: 30px;
+    width: 1px;
+    background: black;
+    border: none;
+}
+
+main {
+    min-height: auto;
+}
+
+.c {
+    width: calc(100% - 128px);
+    margin: auto;
+}
+
+.foot {
+    width: 100%;
+    padding: 30px 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.left img {
+    width: 112px;
+    height: auto;
+}
+
+.left p {
+    margin: 0;
+    color: #543B25;
+    font-family: 'Poppins';
+    font-size: 15px;
+}
+
+.right {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.right a {
+    text-decoration: none;
+    color: gray;
+}
+
+@media (max-width: 1024px) {
+    .head { padding: 25px 30px; gap: 15px; }
+    .links { gap: 20px; font-size: 18px; }
+    .search a img { width: 25px; }
+    .foot { padding: 25px 30px; }
+    .c { width: calc(100% - 60px); }
+}
+
+@media (max-width: 768px) {
+    .head { flex-direction: column; justify-content: center; text-align: center; padding: 25px 20px; }
+    .logo { padding-bottom: 0; }
+    .links { flex-wrap: wrap; gap: 15px; font-size: 17px; }
+    .search { gap: 15px; }
+    .foot { flex-direction: column; text-align: center; gap: 20px; }
+    .right { justify-content: center; }
+    .c { width: calc(100% - 40px); }
 }
 
 
-.foot{
-    width:100%;
-    padding:30px 64px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-.left{
-    display:flex;
-    flex-direction:column;
-    gap:10px;
-}
-
-.left img{
-    width:112px;
-    height:auto;
-}
-
-.left p{
-    margin:0;
-    color:#543B25;
-    font-family:'Poppins';
-    font-size:15px;
-}
-
-.right{
-    display:flex;
-    gap:20px;
-    flex-wrap:wrap;
-}
-
-.right a{
-    text-decoration:none;
-    color:gray;
-}
-
-
-@media (max-width:1024px){
-
-    .head{
-        padding:25px 30px;
-        gap:15px;
-    }
-
-    .links{
-        gap:20px;
-        font-size:18px;
-    }
-
-    .search a img{
-        width:25px;
-    }
-
-    .foot{
-        padding:25px 30px;
-    }
-
-    .c{
-        width:calc(100% - 60px);
-    }
-}
-
-
-@media (max-width:768px){
-
-    .head{
-        flex-direction:column;
-        justify-content:center;
-        text-align:center;
-        padding:25px 20px;
-    }
-
-    .logo{
-        padding-bottom:0;
-    }
-
-    .links{
-        flex-wrap:wrap;
-        gap:15px;
-        font-size:17px;
-    }
-
-    .search{
-        gap:15px;
-    }
-
-    .foot{
-        flex-direction:column;
-        text-align:center;
-        gap:20px;
-    }
-
-    .right{
-        justify-content:center;
-    }
-
-    .c{
-        width:calc(100% - 40px);
-    }
-}
-
-/* ======== Light styles (account pages) =========*/
-
-/* theme variables */
+/* account light */
 body.account-page {
     --bg: #f3f2f0;
     --surface: #ffffff;
@@ -248,10 +195,6 @@ body.account-page * {
 
 body.account-page {
     scroll-behavior: smooth;
-}
-
-/* Account pages layout */
-body.account-page {
     min-height: 100vh;
     margin: 0;
     background: var(--bg);
@@ -260,21 +203,22 @@ body.account-page {
     flex-direction: column;
     overflow-x: hidden;
     font-family: "Poppins", sans-serif;
+    justify-content: space-between;
 }
-/* Images inside account pages */
+
 body.account-page img {
     display: block;
     max-width: 100%;
 }
-/* Links inherit text color */
+
 body.account-page a {
     color: inherit;
 }
-/*  .head / logo / links / divider behavior */
+
 body.account-page .head {
     width: 100%;
     min-height: 112px;
-    padding: 24px clamp(20px, 5vw, 64px);
+    padding: 24px 64px;
     margin-bottom: 0;
     background: transparent;
     display: flex;
@@ -302,8 +246,8 @@ body.account-page .links {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(16px, 3vw, 42px);
-    font-size: clamp(15px, 1.35vw, 20px);
+    gap: 42px;
+    font-size: 20px;
     font-weight: 600;
 }
 
@@ -319,7 +263,6 @@ body.account-page .links .act {
     color: var(--main-color);
 }
 
-/* Search / list / right icons grouping */
 body.account-page .search,
 body.account-page .li,
 body.account-page .ri {
@@ -336,13 +279,11 @@ body.account-page .li {
     gap: 15px;
 }
 
-/* Theme toggle button */
 body.account-page .theme-btn {
     width: 30px;
     height: 30px;
     padding: 0;
     border: 0;
-    border-radius: 0;
     background: transparent;
     cursor: pointer;
     display: grid;
@@ -359,47 +300,45 @@ body.account-page .theme-btn img {
     object-fit: contain;
 }
 
-/* Right icons sizing  */
+body.account-page .ri {
+    gap: 18px;
+}
+
 body.account-page .ri img {
     width: 22px;
     height: 22px;
     object-fit: contain;
 }
 
-body.account-page .ri {
-    gap: 18px;
-}
-
-/* Divider line  header */
 body.account-page .divider {
     width: 1px;
     height: 32px;
     background: var(--line);
 }
 
-/* Account home wrapper  */
 body.account-page .home-main {
-    width: min(1180px, calc(100% - 40px));
+    width: 1180px;
+    max-width: calc(100% - 40px);
     margin: 0 auto;
     padding: 36px 0 80px;
 }
 
-/* Hero section  */
 body.account-page .hero {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: clamp(32px, 6vw, 80px);
+    gap: 80px;
     min-height: 560px;
 }
+
 body.account-page .eyebrow {
     margin: 0 0 14px;
     color: var(--main-color);
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0;
 }
+
 body.account-page .hero h1,
 body.account-page .account-panel h1 {
     margin: 0;
@@ -408,17 +347,20 @@ body.account-page .account-panel h1 {
     line-height: 1.03;
     color: var(--heading);
 }
+
 body.account-page .hero h1 {
     max-width: 660px;
-    font-size: clamp(48px, 7vw, 92px);
+    font-size: 92px;
 }
+
 body.account-page .lead {
     max-width: 600px;
     margin: 22px 0 0;
     color: var(--soft-color);
-    font-size: clamp(17px, 1.8vw, 22px);
+    font-size: 22px;
     line-height: 1.55;
 }
+
 body.account-page .hero-actions {
     display: flex;
     flex-wrap: wrap;
@@ -426,7 +368,7 @@ body.account-page .hero-actions {
     margin-top: 32px;
 }
 
-/* Buttons shared style */
+/* ===== buttons ===== */
 body.account-page .primary-btn,
 body.account-page .secondary-btn,
 body.account-page .google-btn {
@@ -445,14 +387,12 @@ body.account-page .google-btn {
     transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
-/* Primary button */
 body.account-page .primary-btn {
     border: 1px solid var(--main-color);
     background: var(--main-color);
     color: #ffffff;
 }
 
-/* Secondary + Google buttons  */
 body.account-page .secondary-btn,
 body.account-page .google-btn {
     border: 1px solid var(--button-border);
@@ -460,7 +400,6 @@ body.account-page .google-btn {
     color: var(--text);
 }
 
-/* Buttons hover */
 body.account-page .primary-btn:hover,
 body.account-page .secondary-btn:hover,
 body.account-page .google-btn:hover {
@@ -472,10 +411,9 @@ body.account-page .primary-btn:hover {
     border-color: var(--main-dark);
 }
 
-/* Book preview */
 body.account-page .book-preview {
     min-height: 470px;
-    padding: clamp(22px, 4vw, 40px);
+    padding: 40px;
     border-radius: 8px;
     background:
         linear-gradient(145deg, rgba(255, 255, 255, 0.18), transparent 42%),
@@ -486,7 +424,6 @@ body.account-page .book-preview {
     gap: 18px;
 }
 
-/* Cards style */
 body.account-page .book-preview article,
 body.account-page .feature-grid article {
     border: 1px solid var(--soft-line);
@@ -516,27 +453,25 @@ body.account-page .feature-grid p {
     line-height: 1.6;
 }
 
-/* Features grid layout */
 body.account-page .feature-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 18px;
     margin-top: 42px;
 }
 
-/* Account main layout */
 body.account-page .account-main {
-    width: min(1040px, calc(100% - 40px));
-    min-height: auto;
+    width: 1040px;
+    max-width: calc(100% - 40px);
     margin: 0 auto;
     padding: 32px 0 96px;
     display: grid;
-    grid-template-columns: minmax(300px, 1fr) minmax(320px, 420px);
-    align-items: center;
-    gap: clamp(40px, 8vw, 88px);
+    grid-template-columns: 1fr 420px;
+    align-items: start;
+    gap: 88px;
+    flex: 1;
 }
 
-/* Account visual panel  */
 body.account-page .account-visual {
     min-height: 560px;
     border-radius: 8px;
@@ -546,12 +481,10 @@ body.account-page .account-visual {
     box-shadow: var(--shadow);
 }
 
-/* Account panel heading  */
 body.account-page .account-panel h1 {
-    font-size: clamp(36px, 5vw, 52px);
+    font-size: 52px;
 }
 
-/* Account panel description paragraph  */
 body.account-page .account-panel > p {
     margin: 12px 0 34px;
     color: var(--soft-color);
@@ -559,14 +492,13 @@ body.account-page .account-panel > p {
     line-height: 1.45;
 }
 
-/* Account form layout */
+/* ===== Form ===== */
 body.account-page .account-form {
     display: flex;
     flex-direction: column;
     gap: 13px;
 }
 
-/* Account form labels  */
 body.account-page .account-form label:not(.check-row) {
     color: var(--label);
     font-size: 11px;
@@ -574,7 +506,6 @@ body.account-page .account-form label:not(.check-row) {
     text-transform: uppercase;
 }
 
-/* Form inputs */
 body.account-page .account-form input[type="text"],
 body.account-page .account-form input[type="email"],
 body.account-page .account-form input[type="password"] {
@@ -589,13 +520,11 @@ body.account-page .account-form input[type="password"] {
     outline: none;
 }
 
-/* Inputs focus  */
 body.account-page .account-form input:focus {
     border-color: var(--main-color);
     box-shadow: 0 0 0 3px rgba(223, 154, 63, 0.18);
 }
 
-/* Check  */
 body.account-page .check-row {
     display: flex;
     align-items: center;
@@ -615,7 +544,6 @@ body.account-page .check-row input {
     accent-color: var(--main-color);
 }
 
-/* Form link colors */
 body.account-page .check-row a,
 body.account-page .account-switch a,
 body.account-page .form-row a {
@@ -623,13 +551,11 @@ body.account-page .form-row a {
     text-decoration: none;
 }
 
-/* Submit button */
 body.account-page .account-submit,
 body.account-page .google-btn {
     width: 100%;
 }
 
-/* OR line divider (DARK) */
 body.account-page .or-line {
     position: relative;
     margin: 22px 0 8px;
@@ -655,7 +581,6 @@ body.account-page .or-line span {
     background: var(--bg);
 }
 
-/* Google button size  */
 body.account-page .google-btn {
     min-height: 48px;
 }
@@ -665,7 +590,6 @@ body.account-page .google-btn span {
     line-height: 1;
 }
 
-/* Account switch  */
 body.account-page .account-switch {
     margin: 24px 0 0;
     color: var(--soft-color);
@@ -673,7 +597,6 @@ body.account-page .account-switch {
     text-align: center;
 }
 
-/* Form row layout  */
 body.account-page .form-row {
     display: flex;
     align-items: center;
@@ -684,18 +607,16 @@ body.account-page .form-row {
     margin: 6px 0 8px;
 }
 
-/* Horizontal divider line */
 body.account-page .c {
-    width: calc(100% - clamp(40px, 10vw, 128px));
+    width: calc(100% - 128px);
     margin: auto auto 0;
     border: 0;
     border-top: 1px solid var(--line);
 }
 
-/* Account footer  */
 body.account-page .foot {
     width: 100%;
-    padding: 28px clamp(20px, 5vw, 64px);
+    padding: 28px 64px;
     background: transparent;
     display: flex;
     justify-content: space-between;
@@ -732,19 +653,23 @@ body.account-page .right a {
     text-decoration: none;
 }
 
-/* Popup overlay backdrop  */
+/* =====  pop up  ===== */
 body.account-page .popup-backdrop {
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 1000;
     padding: 20px;
     background: rgba(20, 18, 16, 0.38);
     display: grid;
     place-items: center;
 }
-/* Popup box */
+
 body.account-page .popup-box {
-    width: min(360px, 100%);
+    width: 360px;
+    max-width: 100%;
     padding: 28px;
     border: 1px solid var(--soft-line);
     border-radius: 8px;
@@ -763,132 +688,43 @@ body.account-page .popup-box p {
 body.account-page .popup-btn {
     width: 100%;
 }
-/*  Responsive <= 980px */
+
+/* ===== Responsive===== */
 @media (max-width: 980px) {
     body.account-page .theme-btn,
-    body.account-page .theme-btn img {
-        width: 25px;
-        height: 25px;
-    }
-
-    /* Stack header layout */
-    body.account-page .head {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    body.account-page .logo {
-        order: 1;
-    }
-
-    body.account-page .search {
-        order: 2;
-        margin-left: auto;
-    }
-
-    body.account-page .links {
-        order: 3;
-        flex-basis: 100%;
-        flex-wrap: wrap;
-    }
-
-    /* Single column layouts */
+    body.account-page .theme-btn img { width: 25px; height: 25px; }
+    body.account-page .head { flex-wrap: wrap; justify-content: center; padding: 24px 30px; }
+    body.account-page .logo { order: 1; }
+    body.account-page .search { order: 2; margin-left: auto; }
+    body.account-page .links { order: 3; flex-basis: 100%; flex-wrap: wrap; }
     body.account-page .hero,
-    body.account-page .account-main {
-        grid-template-columns: 1fr;
-    }
-
-    body.account-page .hero {
-        min-height: auto;
-    }
-
-    body.account-page .account-main {
-        width: min(680px, calc(100% - 40px));
-        padding-top: 18px;
-    }
-
-    body.account-page .account-visual {
-        min-height: 340px;
-    }
-
-    body.account-page .feature-grid {
-        grid-template-columns: 1fr;
-    }
+    body.account-page .account-main { grid-template-columns: 1fr; }
+    body.account-page .hero { min-height: auto; gap: 40px; }
+    body.account-page .hero h1 { font-size: 64px; }
+    body.account-page .lead { font-size: 18px; }
+    body.account-page .account-main { width: 680px; max-width: calc(100% - 40px); padding-top: 18px; gap: 40px; }
+    body.account-page .account-visual { min-height: 340px; }
+    body.account-page .feature-grid { grid-template-columns: 1fr; }
 }
 
-/* Responsive <= 640px */
 @media (max-width: 640px) {
-    body.account-page .head {
-        min-height: auto;
-        padding: 20px;
-        gap: 18px;
-    }
-
-    body.account-page .logo {
-        width: 96px;
-    }
-
-    body.account-page .search {
-        width: 100%;
-        justify-content: center;
-        margin-left: 0;
-        order: 3;
-    }
-
-    body.account-page .links {
-        order: 2;
-        gap: 13px 18px;
-        font-size: 15px;
-    }
-
+    body.account-page .head { min-height: auto; padding: 20px; gap: 18px; }
+    body.account-page .logo { width: 96px; }
+    body.account-page .search { width: 100%; justify-content: center; margin-left: 0; order: 3; }
+    body.account-page .links { order: 2; gap: 13px 18px; font-size: 15px; }
     body.account-page .home-main,
-    body.account-page .account-main {
-        width: min(100% - 28px, 680px);
-    }
-
-    body.account-page .home-main {
-        padding-top: 22px;
-    }
-
-    body.account-page .hero h1 {
-        font-size: clamp(42px, 14vw, 58px);
-    }
-
-    body.account-page .lead {
-        font-size: 16px;
-    }
-
+    body.account-page .account-main { width: calc(100% - 28px); max-width: 680px; }
+    body.account-page .home-main { padding-top: 22px; }
+    body.account-page .hero h1 { font-size: 48px; }
+    body.account-page .lead { font-size: 16px; }
     body.account-page .hero-actions,
-    body.account-page .form-row {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
+    body.account-page .form-row { flex-direction: column; align-items: stretch; }
     body.account-page .primary-btn,
-    body.account-page .secondary-btn {
-        width: 100%;
-    }
-
+    body.account-page .secondary-btn { width: 100%; }
     body.account-page .book-preview,
-    body.account-page .account-visual {
-        min-height: 300px;
-    }
-
-    body.account-page .account-panel h1 {
-        font-size: 36px;
-    }
-
-    body.account-page .foot {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    body.account-page .left {
-        align-items: center;
-    }
-
-    body.account-page .right {
-        justify-content: center;
-        gap: 12px 18px;
-    }
+    body.account-page .account-visual { min-height: 300px; }
+    body.account-page .account-panel h1 { font-size: 36px; }
+    body.account-page .foot { flex-direction: column; text-align: center; }
+    body.account-page .left { align-items: center; }
+    body.account-page .right { justify-content: center; gap: 12px 18px; }
 }
